@@ -1,0 +1,49 @@
+# Build directories
+build/
+cmake-build-*/
+out/
+Debug/
+Release/
+
+# Compiled files
+*.o
+*.obj
+*.a
+*.lib
+*.dll
+*.exe
+*.so
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+logs/
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.user
+
+# Operating system
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# Environment configuration
+.env
+.env.*
+!.env.example
+
+# Test artifacts
+test-results/
+coverage
