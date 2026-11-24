@@ -4,6 +4,17 @@ cmake-build-*/
 out/
 Debug/
 Release/
+bin/
+obj/
+
+# CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+Makefile
+compile_commands.json
+Testing/
 
 # Compiled files
 *.o
@@ -13,6 +24,12 @@ Release/
 *.dll
 *.exe
 *.so
+*.pdb
+*.ilk
+*.exp
+
+# Downloaded dependencies
+_deps/
 
 # Database files
 *.db
@@ -28,6 +45,8 @@ logs/
 .idea/
 *.suo
 *.user
+*.VC.db
+*.VC.VC.opendb
 
 # Operating system
 .DS_Store
@@ -38,12 +57,17 @@ Desktop.ini
 *.tmp
 *.bak
 *.swp
+*.orig
 
 # Environment configuration
 .env
 .env.*
 !.env.example
+secrets/
+Credentials/
 
 # Test artifacts
 test-results/
-coverage
+coverage/
+*.profraw
+*.profdata
