@@ -49,6 +49,7 @@ endif()
 
 add_library(tillrecon_ingestion STATIC
     src/ingestion/source_record_identity.cpp
+    src/ingestion/raw_source_record.cpp
 )
 
 target_include_directories(tillrecon_ingestion
@@ -123,5 +124,19 @@ if(BUILD_TESTING)
     )
 
     gtest_discover_tests(tillrecon_ingestion_tests)
+
+    add_executable(
+        tillrecon_raw_source_record_tests
+        tests/unit/raw_source_record_tests.cpp
+    )
+
+    target_link_libraries(
+        tillrecon_raw_source_record_tests
+        PRIVATE
+            tillrecon_ingestion
+            GTest::gtest_main
+    )
+
+    gtest_discover_tests(tillrecon_raw_source_record_tests)
 
 endif()
